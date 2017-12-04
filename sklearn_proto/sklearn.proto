@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+//python -m grpc_tools.protoc -I./sklearn_proto --python_out=. --grpc_python_out=./protos/sklearn.proto
+
+package sklearn_grpc;
+
+// The greeting service definition.
+service iris_prediction {
+  // Sends a greeting
+  rpc predict_iris (input_data) returns (iris_type) {}
+}
+
+// The request message containing the user's name.
+message input_data {
+  repeated double item_features = 1;
+}
+
+// The response message containing the greetings
+message iris_type {
+  string pred_type = 1;
+}
