@@ -1,3 +1,7 @@
+# Summary
+This project is  to convert a SVM model trained on iris data set to a grpc service. The model itself is built in python's scikit learn package
+
+# How to USE
 git clone https://github.com/DihuiLai/sklearn_prediction_grpc_service.git
 
 
